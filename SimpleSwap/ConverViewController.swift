@@ -6,12 +6,26 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class ConverViewController: UIViewController {
 
     @IBOutlet weak var fromPopUpButton: UIButton!
     
     @IBOutlet weak var toPopUpBotton: UIButton!
+    
+
+    @IBOutlet weak var getResultTextField: UITextField!
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    let CONVERT_URL = "https://api.currencybeacon.com/v1/convert"
+    let API_ID = "f940d721fa8d92eb93441a357713ff35"
+    
+    var param : [String : String] = [
+        "api_key" : "f940d721fa8d92eb93441a357713ff35"
+    ]
     
     
     override func viewDidLoad() {
@@ -23,12 +37,38 @@ class ConverViewController: UIViewController {
         
     }
     
+    //MARK: Parsing JSON
+    func getResult(json: JSON) {
+        print(json)
+        let result = json["value"].doubleValue
+        resultLabel.text = String(result)
+    }
+    
+        //MARK: Networking
+    
+    func getResultData(url: String, parameters: [String : String]) {
+        AF.request(url, method: .get, parameters: parameters).responseJSON { response in
+            
+            if response .result.isSuccess {
+                let amountResult : JSON = JSON(response.value!)
+                self.getResult(json: amountResult)
+            } else {
+                print("ERROR \(response.error)")
+                self.resultLabel.text = "Connection issues"
+            }
+            
+        }
+    }
+    
     
     //MARK: convert FROM func
     func setFromPopUpButton(){
 
         let optionClosure = {(action : UIAction) in
-            print(action.title)}
+            let fromButton: String = action.title
+            self.param["from"] = fromButton
+        }
+        
 
         fromPopUpButton.menu = UIMenu(children : [
                 UIAction(title : "USD", state: .on, handler: optionClosure),
@@ -46,7 +86,9 @@ class ConverViewController: UIViewController {
     func setToPopUpButton(){
 
         let optionClosure = {(action : UIAction) in
-            print(action.title)}
+            let toButton: String = action.title
+            self.param["to"] = toButton
+        }
 
         // to button func
         toPopUpBotton.menu = UIMenu(children : [
@@ -61,8 +103,17 @@ class ConverViewController: UIViewController {
     }
     
     
+    @IBAction func finishButtonPressed(_ sender: UIButton) {
+        let amount = getResultTextField.text!
+        param["amount"] = amount
+        
+        
+        getResultData(url: CONVERT_URL, parameters: param)
+        
+    }
     
     /*
+     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

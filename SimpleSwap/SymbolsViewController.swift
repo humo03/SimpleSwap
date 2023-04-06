@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class SymbolsViewController: UIViewController {
+    
+    
+    let currencies_url = "https://api.currencybeacon.com/v1/currencies"
+    let api_key = "f940d721fa8d92eb93441a357713ff35"
 
     override func viewDidLoad() {
         super.viewDidLoad()

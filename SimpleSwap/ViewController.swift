@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
         
         //time of LaunchScreen
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-                Thread.sleep(forTimeInterval: 5.0)
+                Thread.sleep(forTimeInterval: 3.0)
                 // Override point for customization after application launch.
                 return true
             }
