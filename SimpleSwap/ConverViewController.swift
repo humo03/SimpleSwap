@@ -18,16 +18,18 @@ class ConverViewController: UIViewController {
         super.viewDidLoad()
         title = "Converting"
         
-        setPopUpButton()
+        setFromPopUpButton()
+        setToPopUpButton()
         
     }
     
-    func setPopUpButton(){
+    
+    //MARK: convert FROM func
+    func setFromPopUpButton(){
 
         let optionClosure = {(action : UIAction) in
             print(action.title)}
 
-        // from button func
         fromPopUpButton.menu = UIMenu(children : [
                 UIAction(title : "USD", state: .on, handler: optionClosure),
                 UIAction(title : "UZS", handler: optionClosure),
@@ -37,7 +39,15 @@ class ConverViewController: UIViewController {
 
         fromPopUpButton.showsMenuAsPrimaryAction = true
         fromPopUpButton.changesSelectionAsPrimaryAction = true
-        
+    }
+    
+    
+    //MARK: convert TO func
+    func setToPopUpButton(){
+
+        let optionClosure = {(action : UIAction) in
+            print(action.title)}
+
         // to button func
         toPopUpBotton.menu = UIMenu(children : [
                 UIAction(title : "UZS", state: .on, handler: optionClosure),

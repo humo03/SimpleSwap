@@ -9,6 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBAction func pressedSymbolButton(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func pressedConvertButton(_ sender: UIButton)  {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +26,9 @@ class ViewController: UIViewController {
                 // Override point for customization after application launch.
                 return true
             }
-        // Do any additional setup after loading the view.
+        
+
+        
     }
 
 

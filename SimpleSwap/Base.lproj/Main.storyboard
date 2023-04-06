@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Teal View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TealViewController" customModule="SimpleSwap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleSwap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,8 @@
                                     <color key="baseBackgroundColor" red="0.21568629149999999" green="0.30980393290000002" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Ygn-tT-A9s" kind="show" id="wce-lw-V8t"/>
+                                    <action selector="pressedSymbolButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0OL-Ep-hEP"/>
+                                    <segue destination="Ygn-tT-A9s" kind="show" identifier="toSymbolView" id="V2f-Tf-zSk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3E-7O-Dc7">
@@ -38,7 +39,8 @@
                                     <color key="baseBackgroundColor" red="0.21568629149999999" green="0.30980393290000002" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="hpP-IY-wLU" kind="show" id="55S-vy-TBN"/>
+                                    <action selector="pressedConvertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSl-a4-fGa"/>
+                                    <segue destination="hpP-IY-wLU" kind="show" identifier="toConvertView" id="oy4-Tu-cph"/>
                                 </connections>
                             </button>
                         </subviews>
