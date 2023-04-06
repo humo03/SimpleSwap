@@ -1,0 +1,6 @@
+framework module Pods_SimpleSwap {
+  umbrella header "Pods-SimpleSwap-umbrella.h"
+
+  export *
+  module * { export * }
+}
