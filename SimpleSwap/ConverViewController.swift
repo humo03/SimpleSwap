@@ -20,6 +20,7 @@ class ConverViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    
     let CONVERT_URL = "https://api.currencybeacon.com/v1/convert"
     let API_ID = "f940d721fa8d92eb93441a357713ff35"
     
@@ -35,12 +36,15 @@ class ConverViewController: UIViewController {
         setFromPopUpButton()
         setToPopUpButton()
         
+        resultLabel.layer.cornerRadius = 5
+        resultLabel.layer.masksToBounds = true
+        
     }
     
     //MARK: Parsing JSON
     func getResult(json: JSON) {
         print(json)
-        let result = json["value"].doubleValue
+        let result = json["response"]["value"].doubleValue
         resultLabel.text = String(result)
     }
     
