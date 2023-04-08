@@ -17,35 +17,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-Ee-gyS">
-                                <rect key="frame" x="152" y="378" width="110" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="JHh-c5-Xbd">
+                                <rect key="frame" x="159.5" y="378.5" width="95" height="139"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-Ee-gyS">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="31"/>
+                                        <color key="tintColor" red="0.2156862745" green="0.30980392159999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Currencies">
+                                            <color key="baseBackgroundColor" red="0.21568629149999999" green="0.30980393290000002" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedSymbolButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0OL-Ep-hEP"/>
+                                            <segue destination="Ygn-tT-A9s" kind="show" identifier="toSymbolView" id="V2f-Tf-zSk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3E-7O-Dc7">
+                                        <rect key="frame" x="0.0" y="108" width="95" height="31"/>
+                                        <color key="tintColor" red="0.2156862745" green="0.30980392159999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Converting">
+                                            <color key="baseBackgroundColor" red="0.21568629149999999" green="0.30980393290000002" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedConvertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSl-a4-fGa"/>
+                                            <segue destination="hpP-IY-wLU" kind="show" identifier="toConvertView" id="oy4-Tu-cph"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huC-QY-rxH">
+                                <rect key="frame" x="33" y="815" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.2156862745" green="0.30980392159999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Currencies">
-                                    <color key="baseBackgroundColor" red="0.21568629149999999" green="0.30980393290000002" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="questionmark.circle" catalog="system"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="pressedSymbolButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0OL-Ep-hEP"/>
-                                    <segue destination="Ygn-tT-A9s" kind="show" identifier="toSymbolView" id="V2f-Tf-zSk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3E-7O-Dc7">
-                                <rect key="frame" x="152" y="495" width="110" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.2156862745" green="0.30980392159999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Convert">
-                                    <color key="baseBackgroundColor" red="0.21568629149999999" green="0.30980393290000002" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="pressedConvertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSl-a4-fGa"/>
-                                    <segue destination="hpP-IY-wLU" kind="show" identifier="toConvertView" id="oy4-Tu-cph"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JHh-c5-Xbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cu2-T8-6Oi"/>
+                            <constraint firstItem="JHh-c5-Xbd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f1B-6E-oqw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vAl-iF-onw"/>
                 </viewController>
@@ -128,7 +144,7 @@
                                 <rect key="frame" x="157" y="433" width="100" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="do it">
+                                <buttonConfiguration key="configuration" style="filled" title="Convert">
                                     <color key="baseBackgroundColor" red="0.21568629149999999" green="0.30980393290000002" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -179,6 +195,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

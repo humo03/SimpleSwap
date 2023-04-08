@@ -17,7 +17,7 @@ class SymbolsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Symbols"
+        title = "Currencies"
         // Do any additional setup after loading the view.
     }
     

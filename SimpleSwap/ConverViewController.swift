@@ -45,7 +45,7 @@ class ConverViewController: UIViewController {
     func getResult(json: JSON) {
         print(json)
         let result = json["response"]["value"].doubleValue
-        resultLabel.text = String(result)
+        resultLabel.text = String(format: "%.2f", result)
     }
     
         //MARK: Networking
@@ -75,7 +75,8 @@ class ConverViewController: UIViewController {
         
 
         fromPopUpButton.menu = UIMenu(children : [
-                UIAction(title : "USD", state: .on, handler: optionClosure),
+                UIAction(title : "From", state: .on, handler: optionClosure),
+                UIAction(title : "USD", handler: optionClosure),
                 UIAction(title : "UZS", handler: optionClosure),
                 UIAction(title : "EUR", handler: optionClosure),
                 UIAction(title : "RUB", handler: optionClosure)])
@@ -96,7 +97,8 @@ class ConverViewController: UIViewController {
 
         // to button func
         toPopUpBotton.menu = UIMenu(children : [
-                UIAction(title : "UZS", state: .on, handler: optionClosure),
+                UIAction(title : "To", state: .on, handler: optionClosure),
+                UIAction(title : "UZS", handler: optionClosure),
                 UIAction(title : "USD", handler: optionClosure),
                 UIAction(title : "EUR", handler: optionClosure),
                 UIAction(title : "RUB", handler: optionClosure)])
