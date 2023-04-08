@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C4728E8D2077DFD725D0576 /* Pods_SimpleSwap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C8E257C5C1FDF7B8864540 /* Pods_SimpleSwap.framework */; };
 		925FEB92C2EB7B32D96DC66B /* Pods_SimpleSwapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E34C30A19925D4547812D6 /* Pods_SimpleSwapTests.framework */; };
+		9F036BB829E164460057AF5E /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F036BB729E164460057AF5E /* HelpViewController.swift */; };
 		9F1F862329DBD5AC00C6BCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F862229DBD5AC00C6BCA3 /* AppDelegate.swift */; };
 		9F1F862529DBD5AC00C6BCA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F862429DBD5AC00C6BCA3 /* SceneDelegate.swift */; };
 		9F1F862729DBD5AC00C6BCA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F862629DBD5AC00C6BCA3 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		58C8E257C5C1FDF7B8864540 /* Pods_SimpleSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF1BD4E41EC3AE5D71505C6 /* Pods-SimpleSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSwap.release.xcconfig"; path = "Target Support Files/Pods-SimpleSwap/Pods-SimpleSwap.release.xcconfig"; sourceTree = "<group>"; };
 		9E37E7EEB2FB517A59FA0596 /* Pods-SimpleSwap-SimpleSwapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSwap-SimpleSwapUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleSwap-SimpleSwapUITests/Pods-SimpleSwap-SimpleSwapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F036BB729E164460057AF5E /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		9F1F861F29DBD5AC00C6BCA3 /* SimpleSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1F862229DBD5AC00C6BCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F1F862429DBD5AC00C6BCA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				9F1F862629DBD5AC00C6BCA3 /* ViewController.swift */,
 				9F1F865829DBDB6B00C6BCA3 /* ConverViewController.swift */,
 				9F1F865A29DBDBC200C6BCA3 /* SymbolsViewController.swift */,
+				9F036BB729E164460057AF5E /* HelpViewController.swift */,
 				9F1F862829DBD5AC00C6BCA3 /* Main.storyboard */,
 				9F1F862B29DBD5AD00C6BCA3 /* Assets.xcassets */,
 				9F1F862D29DBD5AD00C6BCA3 /* LaunchScreen.storyboard */,
@@ -160,7 +163,6 @@
 				2DF693295F2D39F077BA1802 /* Pods-SimpleSwapTests.debug.xcconfig */,
 				EEC659B4A297BD716F5FECD8 /* Pods-SimpleSwapTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -414,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1F862729DBD5AC00C6BCA3 /* ViewController.swift in Sources */,
+				9F036BB829E164460057AF5E /* HelpViewController.swift in Sources */,
 				9F1F865929DBDB6B00C6BCA3 /* ConverViewController.swift in Sources */,
 				9F1F862329DBD5AC00C6BCA3 /* AppDelegate.swift in Sources */,
 				9F1F862529DBD5AC00C6BCA3 /* SceneDelegate.swift in Sources */,
